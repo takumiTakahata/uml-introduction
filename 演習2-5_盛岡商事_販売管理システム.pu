@@ -1,10 +1,10 @@
 @startuml ユースケース図
 left to right direction
-actor 従業員#DDDDDD;line:black;line.bold;
+actor 出荷担当者#DDDDDD;line:black;line.bold;
 rectangle 販売管理システム {
 usecase 注文商品の確認
 usecase 出荷状況の登録
 }
-従業員 --> 注文商品の確認
-従業員 --> 出荷状況の登録
+出荷担当者 --> 注文商品の確認
+出荷担当者 --> 出荷状況の登録
 @enduml
