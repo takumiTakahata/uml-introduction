@@ -20,6 +20,6 @@ usecase キャンペーン
 従業員 --> 空室状況を入力する
 reserve -[dashed]-> ログインする : <<include>>
 予約を集計する -[dashed]-> ログインする : <<include>>
-空室状況を入力する -[dashed]-> ログインする : <<includr>>
+空室状況を入力する -[dashed]-> ログインする : <<include>>
 会員登録する -[dashed]-> reserve: <<extend>>
 @enduml
