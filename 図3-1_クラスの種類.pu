@@ -20,7 +20,7 @@ hide Employee circle
 '     + 操作2():String
 ' }
 
-class Employee{
+class Employee {
     - id:int=0
     - name:String
     # depertment:String
