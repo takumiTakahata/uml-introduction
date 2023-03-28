@@ -1,7 +1,6 @@
 @startuml
 skinparam classAttributeIconSize 0
 ' ↑可視性をアイコンにしないオプション
-hide Employee circle
 ' class A <<ステレオタイプ>> {}
 ' class B {
 '     - 属性1:int
@@ -33,4 +32,5 @@ class Employee {
     + setDept(dept:String):void
     + getDept():String
 }
+hide Employee circle
 @enduml
