@@ -1,0 +1,21 @@
+@startuml
+object "<u>車1:車</u>" as car{
+
+}
+object "<u>タイヤ1:タイヤ</u>" as t1{
+
+}
+object "<u>タイヤ2:タイヤ</u>" as t2{
+    
+}
+object "<u>タイヤ3:タイヤ</u>" as t3{
+    
+}
+object "<u>タイヤ4:タイヤ</u>" as t4{
+    
+}
+car -- t1
+car -- t2
+car -- t3
+car -- t4
+@enduml
