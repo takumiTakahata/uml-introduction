@@ -1,0 +1,17 @@
+@startuml
+class 従業員{
+   + {abstract} work():void 
+}
+class 派遣{
+    + work():void
+}
+class 契約社員{
+    + work():void
+}
+class 正社員{
+    + work():void
+}
+従業員<--派遣
+従業員<--契約社員
+従業員<--正社員
+@enduml
