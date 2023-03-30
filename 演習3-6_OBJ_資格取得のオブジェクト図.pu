@@ -1,16 +1,16 @@
 @startuml
 left to right direction
-object "<u>高橋洋平さん:社員</u>" as t{
-    
+object "<u>社員1:社員</u>" as t{
+    氏名=高橋洋平さん
 }
-object "<u>樋口正之さん:社員</u>" as h{
-    
+object "<u>社員2:社員</u>" as h{
+    氏名=樋口正之さん
 }
-object "<u>情報処理安全確保支援士:資格</u>" as z{
-    
+object "<u>資格1:資格</u>" as z{
+    名称=情報処理安全確保支援士
 }
-object "<u>LinuC試験Level1:資格</u>" as l{
-    
+object "<u>資格2:資格</u>" as l{
+    名称=LinuC試験Level1
 }
 t -- z
 h -- z
