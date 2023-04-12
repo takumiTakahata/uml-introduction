@@ -1,0 +1,18 @@
+@startuml
+hide footbox
+Actor 客 as member
+participant ":フロア定員" as capacity
+participant ":料理人" as cook
+mainframe sd ラーメン屋さん 
+activate member
+member -> capacity :ラーメンを注文する
+activate capacity 
+capacity -> cook :調理を指示する
+activate cook
+cook -> cook :調理をする
+capacity <-- cook :ラーメン
+member <-- capacity :ラーメン
+deactivate cook
+deactivate capacity
+deactivate member
+@enduml
