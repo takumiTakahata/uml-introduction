@@ -1,0 +1,25 @@
+@startuml
+hide footbox
+actor ":会員" as user
+participant ":商品検索画面" as sarch <<boundary>>
+participant ":商品検索コントローラ"  as control <<control>>
+participant ":商品" as goods <<entity>>
+participant ":商品カテゴリ" as category <<entity>>
+activate user
+user -> sarch :商品検索(商品番号)
+activate sarch
+sarch -> control :商品検索(商品番号)
+activate control
+control --> goods :生成() <<create>>
+loop 商品カテゴリ数
+control --> category :生成()<<create>>
+control -> goods :商品カテゴリ設定()
+activate goods
+deactivate goods
+end loop
+sarch <-- control :商品情報
+deactivate control
+sarch -> sarch :商品情報表示(商品情報)
+activate sarch 
+deactivate sarch
+@enduml
