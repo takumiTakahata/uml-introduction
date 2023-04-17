@@ -22,5 +22,4 @@ deactivate boundary
 activate order
 deactivate order
 deactivate user
-
 @enduml
