@@ -7,13 +7,15 @@ participant ":画像サーバー" as image
 activate user
 user -> brauza :リンクボタンを押す
 activate brauza
-brauza -> Web :画像を探す
+brauza -> Web :画像ファイル名と命令を渡す
 activate Web
 Web -> image :画像ファイルを探す
 activate image
-Web <-- image :閲覧を許可
+image -> image :画像ファイルを探す
+Web <-- image :画像ファイル
 deactivate image
-brauza <-- Web :画像ファイルを再生
+brauza <-- Web :画像ファイルとHTML
+user <-- brauza :画像の閲覧
 deactivate brauza
 deactivate user
 @enduml
