@@ -1,0 +1,19 @@
+@startuml
+hide footbox
+actor ":ユーザ" as user
+participant ":ブラウザ" as brauza
+participant ":Webサーバー" as Web
+participant ":画像サーバー" as image
+activate user
+user -> brauza :リンクボタンを押す
+activate brauza
+brauza -> Web :画像を探す
+activate Web
+Web -> image :画像ファイルを探す
+activate image
+Web <-- image :閲覧を許可
+deactivate image
+brauza <-- Web :画像ファイルを再生
+deactivate brauza
+deactivate user
+@enduml

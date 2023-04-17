@@ -1,0 +1,16 @@
+@startuml
+hide footbox
+participant controller
+participant hotel
+participant reserve
+mainframe sd 予約
+activate controller
+controller -> hotel :予約する()
+activate hotel
+hotel -> reserve :<<create>>
+hotel -> hotel :予約登録()
+activate hotel
+deactivate hotel
+deactivate hotel
+deactivate controller
+@enduml
