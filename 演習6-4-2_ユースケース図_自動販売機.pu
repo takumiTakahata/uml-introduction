@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor 客
+actor ベンダー
+rectangle 自動販売機の機能{
+usecase "お金を入れる" as UC1
+usecase "ボタンを押す" as UC2
+usecase "ドリンクを出す" as UC3
+usecase "ドリンクを補充する" as UC4
+usecase "料金を回収する" as UC5
+}
+客 --> UC1
+客 --> UC2
+UC2 --> UC3
+ベンダー --> UC4
+ベンダー --> UC5
+@enduml

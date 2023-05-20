@@ -1,0 +1,20 @@
+@startuml
+hide footbox
+
+actor 客
+participant "料金装置" as P1
+participant "ボタン" as P2
+participant "ベンダー装置" as P3
+
+activate 客
+客 -> P1: お金を入れる
+activate P1
+P1 -> P2: 金額を送信する
+activate P2
+P2 -> P3: 飲み物の注文を送信する
+activate P3
+P3 -> 客: 飲み物をだす
+deactivate P3
+deactivate P2
+deactivate P1
+@enduml
