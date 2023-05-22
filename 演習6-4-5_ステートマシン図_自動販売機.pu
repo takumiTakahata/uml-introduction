@@ -1,0 +1,14 @@
+@startuml
+
+state ドリンク購入 {
+  state entry <<entryPoint>>
+  state exit <<exitPoint>>
+  entry -left-> お金受付中
+  お金受付中 --> 飲み物選択中 : お金を入れる
+  飲み物選択中 --> 飲み物購入中 : ドリンクを出す
+  飲み物購入中 --> お金受付中 : ドリンクを取る
+  お金受付中-right->exit
+}
+[*]-->entry
+exit-->[*]
+@enduml
