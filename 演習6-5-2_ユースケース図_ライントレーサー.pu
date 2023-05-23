@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+actor ユーザー as User
+actor "光センサー" as Sensor
+actor "左モータ" as lMotor
+actor "右モータ" as rMotor
+actor CPU
+actor "電源SW" as PowerSwitch
+rectangle 走行機能{
+usecase "システム起動する" as UC1
+usecase "モータを動かす" as UC2
+usecase "モータを止める" as UC3
+usecase "モータに指示する" as UC4
+usecase "システム停止する" as UC5
+usecase "明暗を判断する" as UC6
+}
+
+User --> UC1
+PowerSwitch --> UC1
+CPU --> UC4
+Sensor --> UC6
+PowerSwitch --> UC5
+lMotor-->UC2
+lMotor-->UC3
+rMotor-->UC2
+rMotor-->UC3
+@enduml
