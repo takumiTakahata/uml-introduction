@@ -1,0 +1,19 @@
+@startuml カレーの調理
+start
+fork
+:野菜を切る;
+:肉を切る;
+fork
+:具材を炒める;
+fork again
+:鍋に水を入れる;
+end fork
+:鍋に具材を入れる;
+:鍋を煮込む;
+:鍋にルーを入れる;
+fork again
+:ご飯を炊く;
+end fork
+:皿にルーとご飯を入れる;
+:カレーライス]
+@enduml
