@@ -1,0 +1,9 @@
+@startuml 予約
+start
+repeat
+:ユーザ名を入力する;
+:パスワードを入力する;
+repeat while () -> [認証失敗]
+:予約を行う;
+stop
+@enduml
